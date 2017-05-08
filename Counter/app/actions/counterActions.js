@@ -11,3 +11,15 @@ export function decrement() {
     type: types.DECREMENT
   };
 }
+
+export function incrementByFive() {
+  return {
+    type: types.INCREMENT5
+  };
+}
+
+export function turnRed() {
+  return {
+    type: types.TURNRED
+  };
+}

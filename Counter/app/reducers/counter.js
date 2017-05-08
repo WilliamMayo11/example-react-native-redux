@@ -1,7 +1,8 @@
 import * as types from '../actions/actionTypes';
 
 const initialState = {
-  count: 0
+  count: 0,
+  color: 'lightgray'
 };
 
 export default function counter(state = initialState, action = {}) {
@@ -16,6 +17,16 @@ export default function counter(state = initialState, action = {}) {
         ...state,
         count: state.count - 1
       };
+      case types.INCREMENT5:
+        return {
+          ...state,
+          count: state.count + 5
+        };
+      case types.TURNRED:
+        return {
+          ...state,
+          color: 'red'
+        };
     default:
       return state;
   }
